@@ -1,0 +1,70 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+<style >
+/* Estiliza a tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estiliza o cabeçalho da tabela */
+table th {
+    background-color: #f4f4f4;
+    color: #555;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estiliza as células da tabela */
+table td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Adiciona uma cor de fundo alternada às linhas */
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Adiciona um efeito de destaque ao passar o mouse sobre as linhas */
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estiliza o botão de deleção */
+button {
+    background-color: #e74c3c; /* Cor de fundo vermelha */
+    color: white; /* Texto branco */
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+    /* Adiciona um efeito ao passar o mouse sobre o botão */
+    button:hover {
+        background-color: #c0392b;
+    }
+
+</style >
