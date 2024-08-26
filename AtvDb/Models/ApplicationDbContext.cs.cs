@@ -9,6 +9,7 @@ namespace AtvDb.Models
         }
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Veiculo> Veiculos { get; set; }
 
         internal bool TestConnection()
         {

@@ -1,24 +1,32 @@
 ﻿@page
-@model AtvDb.Pages.CreateModel
+@model VeiculosModel
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Student</title>
+    <title>Cadastro Veiculo</title>
     <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
-    <h1>Adicionar Novo Cliente</h1>
+
+
+    <h1>Adicionar Veiculo</h1>
     <form method="post">
-        <label for="StudentName">Nome:</label>
-        <input type="text" name="StudentName" required /><br />
-        <label for="Age">Idade:</label>
-        <input type="number" name="Age" required /><br />
-        <label for="Email">Email:</label>
-        <input type="email" name="Email" required /><br />
+        <label for="modelo"> Modelo:</label>
+        <input type="text" name="modelo" required /><br />
+        <label for="veiculoname"> Marca:</label>
+        <input type="text" name="veiculoname" required /><br />
+        <label for="placa">Placa do veiculo:</label>
+        <input type="text" name="placa" required /><br />
+        <label for="Quilometragem_Atual"> Quilometragem Atual:</label>
+        <input type="number" name="Quilometragem_Atual" required /><br />
+        <label for="Ano_de_Fabricação">Ano de Fabricação:</label>
+        <input type="number" name="Ano_de_Fabricação" required /><br />
         <button type="submit">Adicionar</button>
     </form>
+
+
     <style>
         /* Estiliza o corpo da página */
         body {

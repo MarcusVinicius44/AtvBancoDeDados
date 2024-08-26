@@ -1,5 +1,5 @@
 ﻿@page
-@model IndexModel
+@model VeiculoModel
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,22 +8,26 @@
     <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
-    <h1>Lista de clientes</h1>
+    <h1>Lista de veículos</h1>
     <table>
         <tr>
-            <th>Nome</th>
-            <th class="idude">Idade</th>
-            <th>Email</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th class="placa">Placa</th>
+            <th>Quilometragem Atual</th>
+            <th>Ano de Fabricação</th>
         </tr>
-        @foreach (var student in Model.Students)
+        @foreach (var veiculo in Model.Veiculos)
         {
             <tr>
-                <td>@student.StudentName</td>
-                <td>@student.Age</td>
-                <td>@student.Email</td>
-            
-             <td>
-                    <form method="post" asp-page-handler="Delete" asp-route-id="@student.Id" style="display:inline;">
+                <td>@veiculo.modelo</td>
+                <td>@veiculo.veiculoname</td>
+                <td>@veiculo.placa</td>
+                <td>@veiculo.Ano_de_Fabricação</td>
+                <td>@veiculo.Quilometragem_Atual</td>
+
+                <td>
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@veiculo.Id" style="display:inline;">
                         <button type="submit" onclick="return confirm('Tem certeza que deseja deletar este registro?');">
                             Deletar
                         </button>
@@ -32,7 +36,6 @@
             </tr>
         }
     </table>
-
     <style>
         /* Estiliza a tabela */
         table {
@@ -49,7 +52,7 @@
                 color: #555;
                 padding: 10px;
                 text-align: left;
-                position:relative;
+                position: relative;
             }
 
             /* Estiliza as células da tabela */
@@ -77,23 +80,22 @@
             padding: 8px 12px;
             cursor: pointer;
             font-size: 14px;
-            
         }
 
             /* Adiciona um efeito ao passar o mouse sobre o botão */
-           button:hover {
+            button:hover {
                 background-color: #c0392b;
             }
 
-            .placa{
-                position: relative;
-                width: -100px;
-                z-index: auto;
-            }
+        .placa {
+            position: relative;
+            width: -100px;
+            z-index: auto;
+        }
 
-            .idude{
-                widht: 100px;
-            }
+        .idude {
+            widht: 100px;
+        }
 
     </style>
 </body>

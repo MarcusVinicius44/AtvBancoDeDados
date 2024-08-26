@@ -2,14 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using MySqlX.XDevAPI;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
-public class IndexModel : PageModel
+public class IndexModel : PageModel 
 {
-    private readonly ApplicationDbContext _context;
-
-    public IndexModel(ApplicationDbContext context)
+    private readonly ApplicationDbContext _context; 
+public IndexModel(ApplicationDbContext context)
     {
         _context = context;
     }
@@ -19,28 +18,29 @@ public class IndexModel : PageModel
     public async Task OnGetAsync()
     {
         Students = await _context.Students.ToListAsync();
-    }
 
+    }
     public async Task<IActionResult> OnPostAddAsync(Student newStudent)
     {
-        if (!ModelState.IsValid)
+        if (!ModelState.IsValid) 
         {
-            return Page();
+            return Page(); 
         }
-
-        _context.Students.Add(newStudent);
-        await _context.SaveChangesAsync();
-        return RedirectToPage();
+        _context.Students.Add(newStudent); 
+    await _context.SaveChangesAsync(); 
+        return RedirectToPage(); 
     }
 
     public async Task<IActionResult> OnPostDeleteAsync(int id)
     {
-        var student = await _context.Students.FindAsync(id);
-        if (student != null)
-        {
-            _context.Students.Remove(student);
-            await _context.SaveChangesAsync();
+        var student = await _context.Students.FindAsync(id); 
+        if (student != null) 
+                {
+                    _context.Students.Remove(student); 
+        await _context.SaveChangesAsync(); 
         }
-        return RedirectToPage();
-    }
+                return RedirectToPage(); 
+         }
+
+    
 }
