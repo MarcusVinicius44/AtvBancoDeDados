@@ -1,0 +1,102 @@
+﻿@page
+@model VeiculosModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro Veiculo</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+
+
+    <h1>Adicionar Veículo</h1>
+    <form method="post">
+        <label for="modelo"> Modelo:</label>
+        <input type="text" name="modelo" required /><br />
+        <label for="veiculoname"> Marca:</label>
+        <input type="text" name="veiculoname" required /><br />
+        <label for="placa">Placa do veiculo:</label>
+        <input type="text" name="placa" required /><br />
+        <label for="Quilometragem_Atual"> Quilometragem Atual:</label>
+        <input type="number" name="Quilometragem_Atual" required /><br />
+        <label for="Ano_de_Fabricação">Ano de Fabricação:</label>
+        <input type="number" name="Ano_de_Fabricação" required /><br />
+        <button type="submit">Adicionar</button>
+    </form>
+
+
+    <style>
+        /* Estiliza o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Estiliza o cabeçalho */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* Estiliza o formulário */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estiliza os rótulos */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        /* Estiliza os campos de entrada */
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Estiliza o botão de envio */
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #0d165f; /* Cor de fundo verde */
+            color: white; /* Texto branco */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            /* Adiciona um efeito ao passar o mouse sobre o botão */
+            button:hover {
+                background-color: #171a4a; /* Cor de fundo verde mais escura */
+            }
+
+        /* Estiliza o espaçamento entre os campos */
+        form > input {
+            margin-bottom: 15px; /* Espaço entre campos */
+        }
+
+    </style>
+</body>
+</html>

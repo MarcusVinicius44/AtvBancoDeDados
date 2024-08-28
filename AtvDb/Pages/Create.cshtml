@@ -1,0 +1,94 @@
+﻿@page
+@model AtvDb.Pages.CreateModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Student</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <h1>Adicionar Novo Cliente</h1>
+    <form method="post">
+        <label for="StudentName">Nome:</label>
+        <input type="text" name="StudentName" required /><br />
+        <label for="Age">Idade:</label>
+        <input type="number" name="Age" required /><br />
+        <label for="Email">Email:</label>
+        <input type="email" name="Email" required /><br />
+        <button type="submit">Adicionar</button>
+    </form>
+    <style>
+        /* Estiliza o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Estiliza o cabeçalho */
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        /* Estiliza o formulário */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estiliza os rótulos */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        /* Estiliza os campos de entrada */
+        input[type="text"],
+        input[type="number"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Estiliza o botão de envio */
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #0d165f; /* Cor de fundo verde */
+            color: white; /* Texto branco */
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            /* Adiciona um efeito ao passar o mouse sobre o botão */
+            button:hover {
+                background-color: #171a4a; /* Cor de fundo verde mais escura */
+            }
+
+        /* Estiliza o espaçamento entre os campos */
+        form > input {
+            margin-bottom: 15px; /* Espaço entre campos */
+        }
+
+    </style>
+</body>
+</html>

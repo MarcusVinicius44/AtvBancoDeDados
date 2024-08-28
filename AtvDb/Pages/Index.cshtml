@@ -1,0 +1,118 @@
+﻿@page
+@model IndexModel
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <h1>Lista de clientes</h1>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th class="idude">Idade</th>
+            <th class="email">Email</th>
+            <th>Ações</th>
+        </tr>
+        @foreach (var student in Model.Students)
+        {
+            <tr class="student">
+                <td widht:400px;>
+                    @student.StudentName
+                </td>
+                <td widht:400px;>
+                    @student.Age
+                </td>
+                <td widht:400px;>
+                    @student.Email
+                </td>
+            
+             <td>
+                    <form method="post" asp-page-handler="Delete" asp-route-id="@student.Id" style="display:inline;">
+                        <button type="submit" onclick="return confirm('Tem certeza que deseja deletar este registro?');">
+                            Deletar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <style>
+        tr .student{
+            widht:400px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        td button{
+            position: relative;
+            left:100px;
+        }
+        th {
+            width: 580px; /* Ajusta a largura das células do cabeçalho */
+            border: 1px solid #ddd; /* Adiciona uma borda para visibilidade */
+            padding: 10px; /* Ajusta o padding para melhor apresentação */
+            text-align: left;
+        }
+            /* Estiliza o cabeçalho da tabela */
+            table th {
+                background-color: #f4f4f4;
+                color: #555;
+                padding: 10px;
+                text-align: left;
+                position:relative;
+            }
+
+            /* Estiliza as células da tabela */
+            table td {
+                border-bottom: 1px solid #ddd;
+                padding: 10px;
+            }
+
+            /* Adiciona uma cor de fundo alternada às linhas */
+            table tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+
+            /* Adiciona um efeito de destaque ao passar o mouse sobre as linhas */
+            table tr:hover {
+                background-color: #f1f1f1;
+            }
+
+        /* Estiliza o botão de deleção */
+        button {
+            background-color: #e74c3c; /* Cor de fundo vermelha */
+            color: white; /* Texto branco */
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            
+        }
+
+            /* Adiciona um efeito ao passar o mouse sobre o botão */
+           button:hover {
+                background-color: #c0392b;
+            }
+
+            .placa{
+                position: relative;
+                width: -100px;
+                z-index: auto;
+            }
+
+            .idude{
+                widht: 100px;
+            }
+
+    </style>
+</body>
+</html>
